@@ -5,6 +5,8 @@ var {mongoose}=require('./db/mongoose');
 var services= require("./services.js")
 var{Todo}=require('./model/todo');
 var{User}=require('./model/user');
+
+const port=process.env.PORT ||4000;
 //var{User_profile}=require('./model/user_profile');
 var app=express();
 
@@ -99,9 +101,9 @@ app.delete('/todos/:id',(req,res)=>{
 	});
 })
 
-app.listen(4000,()=>{
+app.listen(port,()=>{
 
-  console.log("Started on Port 4000");
+  console.log(`Server is listening on port${port}`);
 });
 
 app.post('/assignTopics',(req,res)=>{
