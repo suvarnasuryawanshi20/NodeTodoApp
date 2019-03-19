@@ -116,3 +116,10 @@ app.post('/assignTopics',(req,res)=>{
 
 	});
 });
+
+app.get('/',(req,res)=>{
+
+var user= "prashant"
+ res.send(user)
+
+});
